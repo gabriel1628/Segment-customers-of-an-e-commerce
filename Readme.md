@@ -19,15 +19,15 @@ The project also includes a maintenance time estimation module that uses the Adj
 ## Project Structure
 The project is organized into three main notebooks:
 1. **[1_EDA.ipynb](1_EDA.ipynb)**: Exploratory Data Analysis (EDA) to understand the dataset and prepare it for clustering.
-2. **[2_segmentation_analysis.ipynb](2_segmentation_analysis.ipynb)**: Customer segmentation using KMeans clustering and analysis of different segmentation strategies (RFM, RFMS, RFMST, RFMSA).
+2. **[2_segmentation.ipynb](2_segmentation.ipynb)**: Customer segmentation using KMeans clustering and analysis of different segmentation strategies (RFM, RFMS, RFMST, RFMSA).
 3. **[3_maintenance_time_estimation.ipynb](3_maintenance_time_estimation.ipynb)**: Maintenance time estimation to determine when the clustering model should be retrained based on segment stability.
 
 ## Data
-The project uses customer data stored in CSV files, including:
-- `df_rfm.csv`: Contains Recency, Frequency, and Monetary value features.
-- `df_rfms.csv`: Adds Review Score to the RFM features.
-- `df_rfmst.csv`: Adds Total Items purchased to the RFMS features.
-- `df_rfmsa.csv`: Adds Items Per Order to the RFMST features.
+The project uses customer data located on Kaggle : https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce.
+<br>
+This is a Brazilian ecommerce public dataset of orders made at [Olist Store](http://www.olist.com/). The dataset has information of 100k orders from 2016 to 2018 made at multiple marketplaces in Brazil.
+<br>
+This is real commercial data, it has been anonymised, and references to the companies and partners in the review text have been replaced with the names of Game of Thrones great houses.
 
 ## Methodology
 1. **Exploratory Data Analysis**:
@@ -59,14 +59,14 @@ The project uses customer data stored in CSV files, including:
 
 2. Install dependencies (see [Dependencies](#dependencies)).
 
-3; Run the notebooks in the following order:
+3. Run the notebooks in the following order:
    - 1_EDA.ipynb
    - 2_segmentation_analysis.ipynb
    - 3_maintenance_time_estimation.ipynb
 
-4. Ensure the required data files (df_rfm.csv, df_rfms.csv, df_rfmst.csv, df_rfmsa.csv) are placed in the data/ directory.
+4. Ensure the required data files (downloaded from [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)) are placed in the `data/` directory.
 
-Dependencies
+## Dependencies
 The project requires the following Python libraries:
 - numpy
 - pandas
